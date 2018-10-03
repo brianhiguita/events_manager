@@ -64,11 +64,12 @@ class Event {
   public function add_event_query() {
   global $database;
 
-  // $shoe_name = $_POST['shoes_name'];
-  // $shoe_image = $_POST['shoes_image'];
-  // $shoe_size = $_POST['shoes_size'];
-  // $shoe_quantity = $_POST['shoes_quantity'];
-  // $shoe_price = $_POST['shoes_price'];
+  $event_name = $_POST['event_name'];
+  $event_price = $_POST['event_price'];
+  $event_date = $_POST['event_date'];
+  $event_spots = $_POST['event_spots'];
+  $event_image = $_POST['event_image'];
+  $event_indoor = $_POST['event_indoor'];
 
   // Does a product with the same name already exists?
 
@@ -77,7 +78,7 @@ class Event {
     if (mysqli_num_rows($exists) >= 1) {
       die("this product already exists");
     } else {
-      $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_image`, `event_size`, `event_quantity`, `event_price`) VALUES ('$event_name', '$event_image', '$event_size', '$event_quantity', '$event_price')");
+      $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_price`, `event_date`, `event_spots`, `event_image`, `event_indoor`) VALUES ('$event_name', '$event_price', '$event_date', '$event_spots', '$event_image', '$event_indoor')");
     }
   }
 
