@@ -6,81 +6,84 @@
 
 class Event {
 
-  // shoe single properties
-
+  // Event single properties
   public $name;
-  public $image;
-  public $size;
-  public $quantity;
   public $price;
+  public $date;
+  public $spots;
+  public $image;
+  public $indoor;
 
   // array properties
-  public $id = [];
-  public $names = [];
-  public $images = [];
-  public $sizes = [];
-  public $quantities = [];
-  public $prices = [];
+  public $id_array = [];
+  public $name_array = [];
+  public $price_array = [];
+  public $date_array = [];
+  public $spots_array = [];
+  public $image_array = [];
+  public $indoor_array = [];
 
 
 
-  public function get_shoes_query($get_variable) {
+  public function get_event_query($get_variable) {
   global $database;
-    // needs to be changed to SELECT * FROM shoes where id = get method
-    $result = $this->shoes_query("SELECT * FROM `shoes` where shoes_name = '$get_variable'");
+    // needs to be changed to SELECT * FROM events where id = get method
+    $result = $this->event_query("SELECT * FROM `events` where event_name = '$get_variable'");
 
     while ($row = mysqli_fetch_assoc($result)) {
 
-      $this->name = $row['shoes_name'];
-      $this->image = $row['shoes_image'];
-      $this->size = $row['shoes_size'];
-      $this->quantity = $row['shoes_quantity'];
-      $this->price = $row['shoes_price'];
+      $this->name = $row['event_name'];
+      $this->price = $row['event_price'];
+      $this->date = $row['event_date'];
+      $this->spots = $row['event_spots'];
+      $this->image = $row['event_image'];
+      $this->indoor = $row['event_indoor'];
     }
   }
 
 
-  public function get_multiple_shoes_query() {
+  public function get_multiple_events_query() {
   global $database;
-    // needs to be changed to SELECT * FROM shoes where id = get method
-    $result = $this->shoes_query("SELECT * FROM `shoes`");
+
+    $result = $this->event_query("SELECT * FROM `events`");
 
     while ($row = mysqli_fetch_array($result)) {
       foreach ($result as $row) {
-        $this->id[] = $row['shoes_id'];
-        $this->names[] = $row['shoes_name'];
-        $this->images[] = $row['shoes_image'];
-        $this->sizes[] = $row['shoes_size'];
-        $this->quantities[] = $row['shoes_quantity'];
-        $this->prices[] = $row['shoes_price'];
+        $this->id[] = $row['event_id'];
+        $this->name_array[] = $row['event_name'];
+        $this->price_array[] = $row['event_price'];
+        $this->date_array[] = $row['event_date'];
+        $this->spots_array[] = $row['event_spots'];
+        $this->image_array[] = $row['event_image'];
+        $this->indoor_array[] = $row['event_indoor'];
       }
     }
   }
 
 
-  public function add_shoes_query() {
+  public function add_event_query() {
   global $database;
 
-  $shoe_name = $_POST['shoes_name'];
-  $shoe_image = $_POST['shoes_image'];
-  $shoe_size = $_POST['shoes_size'];
-  $shoe_quantity = $_POST['shoes_quantity'];
-  $shoe_price = $_POST['shoes_price'];
+  // $shoe_name = $_POST['shoes_name'];
+  // $shoe_image = $_POST['shoes_image'];
+  // $shoe_size = $_POST['shoes_size'];
+  // $shoe_quantity = $_POST['shoes_quantity'];
+  // $shoe_price = $_POST['shoes_price'];
 
   // Does a product with the same name already exists?
 
-  $exists = $this->shoes_query("SELECT * FROM `shoes` where `shoes_name` = '$shoe_name'");
+  $exists = $this->event_query("SELECT * FROM `events` where `event_name` = '$event_name'");
 
     if (mysqli_num_rows($exists) >= 1) {
       die("this product already exists");
     } else {
-      $result = $this->shoes_query("INSERT INTO `shoes` (`shoes_name`, `shoes_image`, `shoes_size`, `shoes_quantity`, `shoes_price`) VALUES ('$shoe_name', '$shoe_image', '$shoe_size', '$shoe_quantity', '$shoe_price')");
+      $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_image`, `event_size`, `event_quantity`, `event_price`) VALUES ('$event_name', '$event_image', '$event_size', '$event_quantity', '$event_price')");
     }
   }
 
 
   // query
-  public function shoes_query($sql) {
+  public function event_query($sql) {
   global $database;
     $query = $database->query($sql);
     return $query;
