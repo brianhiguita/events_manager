@@ -1,3 +1,5 @@
+/* homepage main backgroud image */
+
 .homepage-bg{
   background-image: url("../img/event_bg.jpg");
   height: 95vh;
@@ -8,9 +10,26 @@
   background-position: center;
 }
 
-.event-wrapper{
-  padding-top: 20px;
-  padding-bottom: 20px;
+/* text section homepage */
+
+.home-text {
+  padding: 60px 0px;
+  display: flex;
+}
+
+.home-text h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.home-text p {
+  text-align: center;
+}
+
+/* display events */
+
+.event-wrapper {
   padding-left: 0px;
   padding-right: 0px;
   border: solid 2px white;
@@ -18,4 +37,38 @@
 
 .each-event {
   height: 300px;
+  display: flex;
 }
+
+.event-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* vertical-align: middle; */
+  position: relative;
+}
+
+.event-link form {
+  position: absolute;
+  top: 50%;
+}
+
+.event-name-button {
+  background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {background-color: grey;}
+footer .row .col-md-12 p {color: white; text-align: center; padding-top: 7px;}

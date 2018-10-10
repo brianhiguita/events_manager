@@ -16,9 +16,16 @@
 
 		<div class="container">
 
-			<div class="row">
-				<p>this is lorem</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div class="row home-text">
+				<h1>About Us</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel mauris vestibulum, imperdiet nunc eu, volutpat dui. Aenean vel convallis tortor, eu eleifend nulla. Vivamus efficitur ex vel enim laoreet, quis porttitor nibh auctor. Curabitur a tincidunt est, quis hendrerit enim. Maecenas faucibus placerat purus eu semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse cursus viverra magna, a lacinia lectus malesuada quis. Quisque molestie magna sit amet viverra posuere. Curabitur sit amet lectus accumsan, rutrum nulla nec, auctor quam. Aliquam laoreet laoreet posuere. Proin iaculis arcu et dui gravida commodo.
+
+					Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus non faucibus lacus. Fusce elementum finibus mi a condimentum. Integer ornare augue lectus, eu tempus est tempus eget. Sed convallis viverra libero, ut consequat ex posuere quis. Donec nisl ante, rhoncus in tellus vitae, faucibus rhoncus ipsum. Curabitur dapibus nec arcu accumsan cursus. Proin viverra tincidunt quam sit amet hendrerit. Ut sit amet tristique mauris. Donec scelerisque, felis ut commodo pellentesque, risus lectus pulvinar nisi, in consectetur nibh ipsum eget arcu. Vivamus vulputate dictum pretium.
+
+				</p>
+
+
 			</div>
 
 		</div>
@@ -32,23 +39,16 @@
 				$new_event = new Event();
 				$new_event->get_multiple_events_query();
 
-
-
 				foreach ($new_event->name_array as $i => $value) { ?>
 
 				  <div class="col-md-4 event-wrapper">
-
 							<div class="img-responsive each-event" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('<?php echo $new_event->image_array[$i] ?>'); ">
-
-					      <form class="" action="event.php" method="get">
-					        <button type="submit" name="name" value="<?php echo $new_event->name_array[$i] ?>">view this product</button>
-					      </form>
+								<div class="event-link">
+									<form class="" action="event.php" method="get">
+										<button class="event-name-button" type="submit" name="name" value="<?php echo $new_event->name_array[$i] ?>"><?php echo $new_event->name_array[$i] ?></button>
+									</form>
+								</div>
 							</div>
-
-							<div class="event-text-section">
-								<h1> Event Name : <?php echo $new_event->name_array[$i] ?></h1>
-							</div>
-
 				  </div>
 
 				<?php  } ?>
