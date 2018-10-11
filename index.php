@@ -43,10 +43,14 @@
 
 				  <div class="col-md-4 event-wrapper">
 							<div class="img-responsive each-event" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('<?php echo $new_event->image_array[$i] ?>'); ">
-								<div class="event-link">
-									<form class="" action="event.php" method="get">
-										<button class="event-name-button" type="submit" name="name" value="<?php echo $new_event->name_array[$i] ?>"><?php echo $new_event->name_array[$i] ?></button>
-									</form>
+								<div class="overlay">
+
+
+									<div class="event-link">
+										<form class="" action="event.php" method="get">
+											<button class="event-name-button" type="submit" name="name" value="<?php echo $new_event->name_array[$i] ?>"><?php echo $new_event->name_array[$i] ?></button>
+										</form>
+									</div>
 								</div>
 							</div>
 				  </div>
