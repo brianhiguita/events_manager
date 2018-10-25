@@ -5,8 +5,15 @@
     </div>
     <div class="row footer">
       <div class="col-md-4">
-        <p>Website Developed by : Brian Higuita</p>
+        <ul>
+          <li>link 1</li>
+          <li>link 2</li>
+          <li>link 3 </li>
+          <li>link 4</li>
+        </ul>
       </div>
+
+
       <div class="col-md-4">
         <div class="text-center center-block">
           <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fab fa-facebook-square fa-3x social"></i></a>
