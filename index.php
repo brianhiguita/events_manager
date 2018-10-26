@@ -22,7 +22,7 @@
 		<div class="container">
 
 			<div class="row home-text">
-				<h1>About Us</h1>
+				<h1>What We Do! </h1>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel mauris vestibulum, imperdiet nunc eu, volutpat dui. Aenean vel convallis tortor, eu eleifend nulla. Vivamus efficitur ex vel enim laoreet, quis porttitor nibh auctor. Curabitur a tincidunt est, quis hendrerit enim. Maecenas faucibus placerat purus eu semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse cursus viverra magna, a lacinia lectus malesuada quis. Quisque molestie magna sit amet viverra posuere. Curabitur sit amet lectus accumsan, rutrum nulla nec, auctor quam. Aliquam laoreet laoreet posuere. Proin iaculis arcu et dui gravida commodo.
 
@@ -67,13 +67,28 @@
 
 
 			<div class="row home-text">
-				<h1>About Us</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel mauris vestibulum, imperdiet nunc eu, volutpat dui. Aenean vel convallis tortor, eu eleifend nulla. Vivamus efficitur ex vel enim laoreet, quis porttitor nibh auctor. Curabitur a tincidunt est, quis hendrerit enim. Maecenas faucibus placerat purus eu semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse cursus viverra magna, a lacinia lectus malesuada quis. Quisque molestie magna sit amet viverra posuere. Curabitur sit amet lectus accumsan, rutrum nulla nec, auctor quam. Aliquam laoreet laoreet posuere. Proin iaculis arcu et dui gravida commodo.
+				<!-- <h1> More information </h1> -->
+				<!-- <p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel mauris vestibulum, imperdiet nunc eu, volutpat dui. Aenean vel convallis tortor, eu eleifend nulla. Vivamus efficitur ex vel enim laoreet, quis porttitor nibh auctor. Curabitur a tincidunt est, quis hendrerit enim. Maecenas faucibus placerat purus eu semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+				</p> -->
 
-					Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus non faucibus lacus. Fusce elementum finibus mi a condimentum. Integer ornare augue lectus, eu tempus est tempus eget. Sed convallis viverra libero, ut consequat ex posuere quis. Donec nisl ante, rhoncus in tellus vitae, faucibus rhoncus ipsum. Curabitur dapibus nec arcu accumsan cursus. Proin viverra tincidunt quam sit amet hendrerit. Ut sit amet tristique mauris. Donec scelerisque, felis ut commodo pellentesque, risus lectus pulvinar nisi, in consectetur nibh ipsum eget arcu. Vivamus vulputate dictum pretium.
 
-				</p>
+
+				<div class="col-md-6 home-more-info">
+					<h3>Where We Operate</h3>
+				<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=SW11%204NJ&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">webdesigner</a></div><style>.mapouter{text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
+
+				</div>
+
+				<div class="col-md-6 home-more-info">
+					<h3>Message Us</h3>
+					<form class="" action="index.html" method="post">
+						<textarea class="form-control" name="name" rows="8" cols=""></textarea>
+						<br>
+						<button class="btn" type="submit" name="submit">Send Message</button>
+					</form>
+				</div>
+
 
 
 			</div>

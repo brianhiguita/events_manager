@@ -95,6 +95,18 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* MORE INFO */
+
+.home-more-info {
+  padding-bottom: 50px;
+}
+
+
+.home-more-info h3 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
 
 /* single event */
 
@@ -115,7 +127,7 @@
 
 
 /* footer */
-footer {background-color: #1f1f1f;}
+footer {background-color: #1f1f1f; margin-top: 50px;}
 footer .row .col-md-4 ul {color: white; text-align: center; padding-top: 7px; list-style-type: none;}
 footer .row .col-md-4 ul li {padding-top: 10px;}
 .social:hover {
@@ -160,16 +172,3 @@ footer .row .col-md-4 ul li {padding-top: 10px;}
  h5 {
    color: white;
  }
-
-
-.footer-hr {
-  border-top:solid 1px #4a4a4a;
-  margin-top:30px;
-  margin-bottom:30px;
-
-}
-.footer-hr-bottom {
-    border-bottom:solid 1px #4a4a4a;
-    margin-bottom:30px;
-    margin-top: 30px;
-}

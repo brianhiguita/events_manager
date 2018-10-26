@@ -1,8 +1,6 @@
 <?php
 
 
-// ****** note to self. need to use get request to get product id to display the information of each product individually
-
 
 class Event {
 

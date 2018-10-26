@@ -5,12 +5,7 @@
     </div>
     <div class="row footer">
       <div class="col-md-4">
-        <ul>
-          <li>link 1</li>
-          <li>link 2</li>
-          <li>link 3 </li>
-          <li>link 4</li>
-        </ul>
+        <p>needs filling</p>
       </div>
 
 
@@ -23,10 +18,9 @@
         </div>
       </div>
         <div class="col-md-4">
-          <div class="col-md-6 text-center offset-md-3">
+          <div class="col-md-6 text-center">
               <h5>Never miss another event!</h5>
-              <input type="email" class="form-control subscribe" placeholder="Enter your email">
-              <button class="btn" type="submit">Subscribe</button>
+              <input type="email" class="form-control subscribe" placeholder="Enter your email"> <span> <button class="btn" type="submit">Subscribe</button></span> 
           </div>
         </div>
 
