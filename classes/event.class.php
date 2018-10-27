@@ -10,7 +10,6 @@ class Event {
   public $date;
   public $spots;
   public $image;
-  public $indoor;
 
   // array properties
   public $id_array = [];
@@ -19,7 +18,6 @@ class Event {
   public $date_array = [];
   public $spots_array = [];
   public $image_array = [];
-  public $indoor_array = [];
 
 
 
@@ -35,7 +33,6 @@ class Event {
       $this->date = $row['event_date'];
       $this->spots = $row['event_spots'];
       $this->image = $row['event_image'];
-      $this->indoor = $row['event_indoor'];
     }
   }
 
@@ -47,13 +44,12 @@ class Event {
 
     while ($row = mysqli_fetch_array($result)) {
       foreach ($result as $row) {
-        $this->id[] = $row['event_id'];
+        $this->id_array[] = $row['event_id'];
         $this->name_array[] = $row['event_name'];
         $this->price_array[] = $row['event_price'];
         $this->date_array[] = $row['event_date'];
         $this->spots_array[] = $row['event_spots'];
         $this->image_array[] = $row['event_image'];
-        $this->indoor_array[] = $row['event_indoor'];
       }
     }
   }
@@ -67,7 +63,6 @@ class Event {
   $event_date = $_POST['event_date'];
   $event_spots = $_POST['event_spots'];
   $event_image = $_POST['event_image'];
-  $event_indoor = $_POST['event_indoor'];
 
   // Does a product with the same name already exists?
 
@@ -76,7 +71,7 @@ class Event {
     if (mysqli_num_rows($exists) >= 1) {
       die("this product already exists");
     } else {
-      $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_price`, `event_date`, `event_spots`, `event_image`, `event_indoor`) VALUES ('$event_name', '$event_price', '$event_date', '$event_spots', '$event_image', '$event_indoor')");
+      $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_price`, `event_date`, `event_spots`, `event_image`) VALUES ('$event_name', '$event_price', '$event_date', '$event_spots', '$event_image')");
     }
   }
 

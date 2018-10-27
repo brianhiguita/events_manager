@@ -224,3 +224,19 @@ footer .row .col-md-4 ul li {padding-top: 10px;}
 
 
 /* ADMIN */
+
+
+.admin_page {
+  height: 100vh;
+  padding-left: 0px !important;
+}
+
+
+.admin_page .row {
+  height: 100%;
+}
+
+.sidebar_nav {
+  height: 100%;
+  background-color: grey;
+}
