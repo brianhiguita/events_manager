@@ -9,7 +9,8 @@
     <div class="col-md-10 content_main">
 
       <?php if (isset($_POST['delete'])) {
-        echo $_POST['id'];
+        $delete_event = new Event();
+        $delete_event->delete_event_query($_POST['id']);
       } ?>
 
 			<?php
@@ -25,7 +26,10 @@
           <?php echo $event->price_array[$i] ?>
           <?php echo $event->date_array[$i] ?>
           <?php echo $event->spots_array[$i] ?>
-          <a href="#">update</a>
+          <form class="" action="update.php" method="get">
+            <button type="submit" name="id" value="<?php echo $event->id_array[$i]; ?>">update</button>
+          </form>
+
           <form class="" action="index.php?id=<?php echo $event->id_array[$i]; ?>" method="post">
             <input type="hidden" name="id" value="<?php echo $event->id_array[$i]; ?>">
             <input type="submit" name="delete" value="delete">

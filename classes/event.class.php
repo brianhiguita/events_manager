@@ -24,7 +24,7 @@ class Event {
   public function get_event_query($get_variable) {
   global $database;
     // needs to be changed to SELECT * FROM events where id = get method
-    $result = $this->event_query("SELECT * FROM `events` where event_name = '$get_variable'");
+    $result = $this->event_query("SELECT * FROM `events` where event_id = '$get_variable'");
 
     while ($row = mysqli_fetch_assoc($result)) {
 
@@ -73,6 +73,27 @@ class Event {
     } else {
       $result = $this->event_query("INSERT INTO `events` (`event_name`, `event_price`, `event_date`, `event_spots`, `event_image`) VALUES ('$event_name', '$event_price', '$event_date', '$event_spots', '$event_image')");
     }
+  }
+
+  public function update_event_query($id) {
+    global $database;
+
+    $event_name = $_POST['event_name'];
+    $event_price = $_POST['event_price'];
+    $event_date = $_POST['event_date'];
+    $event_spots = $_POST['event_spots'];
+    $event_image = $_POST['event_image'];
+
+    $result = $this->event_query("UPDATE `events` SET `event_name` = '$event_name' WHERE `event_id` = $id");
+    header("Refresh:0");
+    }
+
+
+
+
+  public function delete_event_query($id) {
+    global $database;
+      $result = $this->event_query("DELETE FROM `events` where `event_id` = '$id'");
   }
 
 
