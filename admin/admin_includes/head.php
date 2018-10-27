@@ -7,6 +7,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Varela+Round" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 
  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 

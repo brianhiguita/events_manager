@@ -82,6 +82,8 @@
 						<div class="col-md-6 home-more-info">
 							<h3>Message Us</h3>
 							<form class="" action="index.html" method="post">
+								<input class="form-control" type="text" name="" value="" placeholder="Your Email">
+								<br>
 								<textarea class="form-control message" name="name" rows="8" cols=""></textarea>
 								<br>
 								<button class="btn" type="submit" name="submit">Send Message</button>

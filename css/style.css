@@ -124,17 +124,32 @@
 /* single event */
 
 .single_event_image {
+  height: 70vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.single_event_info {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.single_event_text {
+  margin: 50px 0px;
+}
+
+.date_price_spots {
   padding:0px;
 }
 
-.single_event_image img {
+.form_wrapper {
   width: 100%;
+  background-color: #f5f5f5ad;
+  padding: 50px 0px;
 }
-
-
-
-
-
 
 
 
@@ -178,10 +193,34 @@ footer .row .col-md-4 ul li {padding-top: 10px;}
 
 
 .social {
-  margin:5px 20px;
+  margin:0 10px;
 }
 
 
  h5 {
    color: white;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ADMIN */
