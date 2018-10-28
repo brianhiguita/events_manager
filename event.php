@@ -9,11 +9,6 @@ $event_prop = "event_name";
 $single_event = new Event();
 $single_event->get_event_query($event_prop, $name);
 
-// echo $single_event->name;
-// echo $single_event->price;
-// echo $single_event->date;
-// echo $single_event->spots;
-// echo $single_event->image;
 
  ?>
 
@@ -55,20 +50,35 @@ $single_event->get_event_query($event_prop, $name);
 
  </div>
 
+ <?php
+ $post_order = new Order();
+	if (isset($_POST['submit'])) {
+
+		if (!empty($_POST['event']) && !empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['contact_number']) && !empty($_POST['first_line']) && !empty($_POST['second_line']) && !empty($_POST['city']) && !empty($_POST['postcode']) && !empty($_POST['quantity'])) {
+
+			$post_order->post_order();
+		}	else {
+			echo "not all fields were filled";
+		}
+
+	}
+
+  ?>
+
  <div class="form_wrapper">
 	 <div class="container">
 
-			 <form class="row" action="index.php" method="post">
+			 <form class="row" action="" method="post">
 				 <div class="col-md-6">
 					 <h4>Personl details</h4>
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="First Name">
+					 <input class="form-control" type="text" name="first_name" value="" placeholder="First Name">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="Last Name">
+					 <input class="form-control" type="text" name="last_name" value="" placeholder="Last Name">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="Your Email">
+					 <input class="form-control" type="text" name="email" value="" placeholder="Your Email">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="Your Contact Number">
+					 <input class="form-control" type="text" name="contact_number" value="" placeholder="Your Contact Number">
 					 <br>
 					<select name="quantity" class="form-control">
 						<option value="">How many tickets would you like</option>
@@ -85,13 +95,14 @@ $single_event->get_event_query($event_prop, $name);
 				 <div class="col-md-6">
 					 <h4>Address</h4>
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="House/flat name or number">
+					 <input class="form-control" type="text" name="first_line" value="" placeholder="first line of address">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="Street">
+					 <input class="form-control" type="text" name="second_line" value="" placeholder="Second line of address">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="City">
+					 <input class="form-control" type="text" name="city" value="" placeholder="City">
 					 <br>
-					 <input class="form-control" type="text" name="" value="" placeholder="PostCode">
+					 <input class="form-control" type="text" name="postcode" value="" placeholder="PostCode">
+					 <input type="hidden" name="event" value="<?php echo $single_event->name; ?>">
 					 <br>
 
 				 </div>
