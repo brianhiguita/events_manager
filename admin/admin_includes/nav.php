@@ -10,10 +10,13 @@
       <a href="add_event.php">Add A New Even</a>
     </li>
     <li>
+      <a href="#">View Orders</a>
+    </li>
+    <li>
       <a href="#">View Subscribers</a>
     </li>
     <li>
-      <a href="#">Inbox</a>
+      <a href="inbox.php">Inbox</a>
     </li>
   </ul>
 </nav>

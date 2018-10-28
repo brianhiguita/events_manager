@@ -21,10 +21,10 @@ class Event {
 
 
 
-  public function get_event_query($get_variable) {
+  public function get_event_query($event_prop, $get_variable) {
   global $database;
     // needs to be changed to SELECT * FROM events where id = get method
-    $result = $this->event_query("SELECT * FROM `events` where event_id = '$get_variable'");
+    $result = $this->event_query("SELECT * FROM `events` where `$event_prop` = '$get_variable'");
 
     while ($row = mysqli_fetch_assoc($result)) {
 
@@ -84,11 +84,8 @@ class Event {
     $event_spots = $_POST['event_spots'];
     $event_image = $_POST['event_image'];
 
-    $result = $this->event_query("UPDATE `events` SET `event_name` = '$event_name' WHERE `event_id` = $id");
-    header("Refresh:0");
+    $result = $this->event_query("UPDATE `events` SET `event_name` = '$event_name', `event_price` = '$event_price', `event_date` = '$event_date', `event_spots` = '$event_spots', `event_image` = '$event_image' WHERE `event_id` = $id");
     }
-
-
 
 
   public function delete_event_query($id) {

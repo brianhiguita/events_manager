@@ -5,16 +5,15 @@
 <?php
 
 $name = $_GET['name'];
-
+$event_prop = "event_name";
 $single_event = new Event();
-$single_event->get_event_query($name);
+$single_event->get_event_query($event_prop, $name);
 
 // echo $single_event->name;
 // echo $single_event->price;
 // echo $single_event->date;
 // echo $single_event->spots;
 // echo $single_event->image;
-// echo $single_event->indoor;
 
  ?>
 

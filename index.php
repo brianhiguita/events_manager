@@ -79,15 +79,31 @@
 
 						</div>
 
+
+
 						<div class="col-md-6 home-more-info">
 							<h3>Message Us</h3>
-							<form class="" action="index.html" method="post">
-								<input class="form-control" type="text" name="" value="" placeholder="Your Email">
+							<form class="" action="index.php" method="post">
+								<input class="form-control" type="email" name="message_email" value="" placeholder="Your Email">
 								<br>
-								<textarea class="form-control message" name="name" rows="8" cols=""></textarea>
+								<textarea class="form-control message" name="message_content" rows="8" cols=""></textarea>
 								<br>
-								<button class="btn" type="submit" name="submit">Send Message</button>
+								<button class="btn" type="submit" name="send_message">Send Message</button>
 							</form>
+
+							<?php if (isset($_POST['send_message'])) {
+								if (!empty($_POST['message_email']) && !empty($_POST['message_content'])) {
+									$send_message = new Message();
+									$send_message->post_message();
+								} else {
+									die("you didnt input and email or content");
+								}
+
+
+
+							} ?>
+
+
 						</div>
 
 
